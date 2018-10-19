@@ -40,6 +40,7 @@ const fs = require("fs");
 
 // const fs = require('fs')
 
+//make dir
 // try{
 // 	fs.mkdirSync('thisIsAFielBro');
 // 	console.log('done')
@@ -49,6 +50,7 @@ const fs = require("fs");
 // 	}
 // }
 
+//delet dir
 // var deleteFolderRecursive = function(path) {
 //   if (fs.existsSync(path)) {
 //     fs.readdirSync(path).forEach(function(file, index){
@@ -67,4 +69,8 @@ const fs = require("fs");
 
 // deleteFolderRecursive( './thing.txt' );
 
+//delet file
 // fs.unlinkSync('./thing.txt');
+
+//if existes
+console.log(`fs.existsSync(object.json) : ${fs.existsSync("object.json")}`);

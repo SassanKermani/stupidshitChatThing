@@ -1,6 +1,6 @@
 # Stupid chat program
 
-## list O shit
+## list O Shit
 -build log in gui 
 	-requests
 	-send form server 
@@ -16,3 +16,6 @@
 -build chat functionality api
 	-shufle agean if you can
 	-db shit YAY
+
+#DB (oh god why, this is a stupid, god help us all)
+-Db in folder <db>

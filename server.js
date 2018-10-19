@@ -7,9 +7,13 @@ const port = 3000;
 
 //route files
 const apiRouter = require('./config/apiRoutes.js');
+const guiRouter = require('./config/guiRouter.js');
 
+app.use(express.static(__dirname + '/public'))
 
 app.use(`/api/`, apiRouter)
+
+app.use(`/gui`, guiRouter)
 
  app.get(`/*`, (req, res)=>{
  	res.send(`Nope`)

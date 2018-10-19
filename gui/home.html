@@ -5,9 +5,7 @@
 </head>
 <body>
 	<center>
-		<h1> Piss off </h1>
 		<br>
-		<hr>
 		<br>
 		<input type="text" placeholder="name" id="name" required>
 		<br>
@@ -20,13 +18,50 @@
 		<!-- JS -->
 		<script type="text/javascript">
 			
-			// https://stackoverflow.com/questions/24468459/sending-a-json-to-server-and-retrieving-a-json-in-return-without-jquery
-			
+			let xmlhttp;		//important
+
 			let login = ()=>{
 				let tempVarName = document.getElementById("name").value;
 				let password = document.getElementById("password").value;
 				console.log(`tempVarName : ${tempVarName} \n password : ${password}`);
+
+
+
+				xmlhttp.send();
 			}
+
+			if (window.XMLHttpRequest) {
+				xmlhttp = new XMLHttpRequest();
+			} else {
+				// code for older browsers
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					console.log(`this.responseText : ${this.responseText}`)
+				}
+			};
+			xmlhttp.open("GET", "/", true);
+			// xmlhttp.send();
+
+
+			/*
+			var xmlhttp;
+			if (window.XMLHttpRequest) {
+				xmlhttp = new XMLHttpRequest();
+			} else {
+				// code for older browsers
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("demo").innerHTML =
+					this.responseText;
+				}
+			};
+			xmlhttp.open("GET", "xmlhttp_info.txt", true);
+			xmlhttp.send();
+			*/
 
 		</script>
 	</center>
